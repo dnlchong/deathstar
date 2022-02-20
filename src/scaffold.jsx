@@ -60,44 +60,46 @@ export default function Scaffold() {
         console.log(receipt);
     }
     return (
-        <div style={{ backgroundImage: `url(${"/background.png"})` }} className="h-screen" >
-
-            <div className="z-10 max-w-2xl py-20 mx-auto">
+        <div style={{ backgroundImage: `url(${"/background.png"})` }} >
+            <div className="max-w-2xl py-20 mx-auto">
                 <div className="bg-white border rounded-lg shadow-md">
-                    <div className="m-8 space-y-4">
-                        <p className="text-3xl font-bold">WELCOME, REBEL HACKER</p>
-                        <p className="text-lg">
-                            You have just stolen the private key to the Empire's funds on Tattooine.
-                            You are now responsible for transporting their tokens to our crypto vault in Coruscant.
-                        </p>
-                        <p className="mb-4 text-lg">
-                            Fly with caution. There have been reports of the Death Star in this area.
-                        </p>
-                        <div className="flex justify-between">
-                            <div>
-                                <ShoppingBagIcon className="w-20 text-blue-600" />
-                            </div>
-                            <div className="inline space-x-6">
-                                {page == 1 ?
-                                    <div className="my-6">
-                                        <button
-                                            onClick={() => connectWallet()}
-                                            type="button"
-                                            className="inline-flex items-center px-4 py-1 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        >
-                                            BEGIN THE TRANSFER
-                                        </button>
-                                    </div>
-
-                                    :
-                                    <>
-                                        <ThreeDots color="#3E59EB" />
-                                        <ThreeDots color="#3E59EB" />
-                                        <ThreeDots color="#3E59EB" />
-                                    </>}
-                            </div>
-                            <div>
-                                <ShoppingBagIcon className="w-20 text-blue-600" />
+                    <div className="m-8">
+                        <div className="space-y-4">
+                            <p className="text-3xl font-bold">WELCOME, REBEL HACKER</p>
+                            <p className="text-lg">
+                                You have just stolen the private key to the Empire's funds on Tattooine.
+                                You are now responsible for transporting their tokens to our crypto vault in Coruscant.
+                            </p>
+                            <p className="text-lg ">
+                                Fly with caution. There have been reports of the Death Star in this area.
+                            </p>
+                        </div>
+                        <div className="mt-8">
+                            <div className="flex justify-between">
+                                <div>
+                                    <img src="/tatooine.png" className="w-32 h-auto" />
+                                </div>
+                                <div className="flex items-center space-x-6">
+                                    {page == 1 ?
+                                        <div className="my-6">
+                                            <button
+                                                onClick={() => connectWallet()}
+                                                type="button"
+                                                className="inline-flex items-center px-4 py-1 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                            >
+                                                BEGIN THE TRANSFER
+                                            </button>
+                                        </div>
+                                        :
+                                        <>
+                                            <ThreeDots color="#3E59EB" />
+                                            <ThreeDots color="#3E59EB" />
+                                            <ThreeDots color="#3E59EB" />
+                                        </>}
+                                </div>
+                                <div>
+                                    <img src="/coruscant.png" className="w-32 h-auto" />
+                                </div>
                             </div>
                         </div>
                         <div className="mt-8 space-y-8">
